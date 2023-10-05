@@ -1,0 +1,7 @@
+<select>
+    <option *ngFor="let value of values" value="value.id">
+        <div *ngIf="value.available">🟢</div>
+        <div *ngIf="!value.available">⚫</div>
+        {{value.name}}
+    </option>
+</select>
