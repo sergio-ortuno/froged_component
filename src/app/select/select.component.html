@@ -1,7 +1,9 @@
-<select>
-    <option *ngFor="let value of values" value="value.id">
+<select [(ngModel)]="valueID" (change)="onValueChange()">
+    <option *ngFor="let value of values" value="{{value.id}}">
         <div *ngIf="value.available">🟢</div>
         <div *ngIf="!value.available">⚫</div>
         {{value.name}}
     </option>
 </select>
+<!-- Testing if the ngModel works -->
+<p>{{valueID}}</p>

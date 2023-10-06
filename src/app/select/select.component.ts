@@ -9,8 +9,6 @@ import { Values } from '../dropdown.interface';
 })
 export class SelectComponent implements OnInit {
 
-  constructor() { }
-
   public values: Array<Values> = [
     { id: 1, name: "Sergio", available: true },
     { id: 2, name: "Juan", available: false },
@@ -18,7 +16,17 @@ export class SelectComponent implements OnInit {
     { id: 4, name: "Lucia", available: false }
   ]
 
+  public valueID: number = 1;
+
+
+  constructor() { }
+
+
   ngOnInit(): void {
+  }
+
+  public onValueChange() {
+    console.log(this.valueID)
   }
 
 }
